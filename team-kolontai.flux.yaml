@@ -5,7 +5,14 @@ metadata:
 spec:
   namespace: team-kolontai
   gitUrl: git@github.com:kodachimaru/gitops-demo-flux-operator.git
-  gitPath: /workloads
+  gitPath: workloads
   gitPollInterval: 5s
   syncInterval: 5s
-  
+  role:
+    enabled: true
+  # Flux Operator seems to be unable to fetch Flux images from quay.io repo
+  # Maybe related to: https://github.com/weaveworks/kured/issues/68
+  # This one should really be preset by the Ops in the Flux Operator deployment config
+  # Hardcoded here for the lazy demo, to avoid having to customize the Flux Operator deployment. :-P
+  fluxImage: weaveworks/flux
+  fluxVersion: 1.8.1  
