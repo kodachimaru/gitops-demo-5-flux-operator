@@ -8,7 +8,7 @@ spec:
   gitPath: workloads
   gitPollInterval: 5s
   syncInterval: 5s
-  role:
+  clusterRole:
     enabled: true
   # Flux Operator seems to be unable to fetch Flux images from quay.io repo
   # Maybe related to: https://github.com/weaveworks/kured/issues/68
