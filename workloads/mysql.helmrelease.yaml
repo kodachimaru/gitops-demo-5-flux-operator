@@ -3,6 +3,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: mysql
+  namespace: team-kolontai
 spec:
   releaseName: mysql
   chart:
