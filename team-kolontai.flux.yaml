@@ -1,0 +1,11 @@
+apiVersion: flux.codesink.net/v1alpha1
+kind: Flux
+metadata:
+  name: team-kolontai
+spec:
+  namespace: team-kolontai
+  gitUrl: git@github.com:kodachimaru/gitops-demo-flux-operator.git
+  gitPath: /workloads
+  gitPollInterval: 5s
+  syncInterval: 5s
+  
